@@ -9,10 +9,8 @@
 
   <body>
     <header>
+      <img src="images/logo.png" alt="Logo" width="132" height="30">
       <h1>GhostHost</h1>
-      <div class="logo">
-        <img src="images/logo.png" alt="Logo" width="132" height="30">
-      </div>
       <nav>
         <ul class="row-flex">
           <li><a href="#">Home</a></li>
@@ -27,14 +25,13 @@
     </header>
     
     <main>
-      <div class="introduction container">
+      <div class="container introduction">
         <h2>HELLO!</h2>
-        <p>We love our work... 
-          <br> 
-          And We're taking it seriously...</p>
+        <p>We love our work... </p>
+        <p>And We're taking it seriously...</p>
       </div>
 
-      <div class="row-flex etry-of-client container">
+      <div class="container row-flex etry-of-client">
         <div class="col-flex">
           <button>LOGIN</button>
         </div>
@@ -44,55 +41,43 @@
         </div>
       </div>
 
-      <div class="domain container">
+      <div class="container domain">
         <h3>Would you like to buy a new domain ?</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           auctor mauris nulla interdum, id molestier.
         </p>
+
         <form>
           <label for="name-of-site">www.</label>
           <input type="text" id="name-of-site" placeholder="What do you want?">
           <select>
-            <option value="">.com</option>
-            <option value="">.ru</option>
-            <option value="">.by</option>
+            <option value="1">.com</option>
+            <option value="2">.ru</option>
+            <option value="3">.by</option>
           </select>
         </form>
-        <table>
-          <tr>
-            <td>
-              .COM
-            </td>
-            <td>
-              1 Year
-            </td>
-            <td>
-              $9.00 USD
-            </td>
-            <td>
-              Transfer Price No
-            </td>
-          </tr>
-          <tr>
-            <td>
-              .NET
-            </td>
-            <td>
-              1 Year
-            </td>
-            <td>
-              $9.00 USD
-            </td>
-            <td>
-              Transfer Price No
-            </td>
-          </tr>
-        </table>
+
+        <div class="domain-table">
+          <table>
+            <tr>
+              <td>.COM</td>
+              <td>1 Year</td>
+              <td>$9.00 USD</td>
+              <td>Transfer Price No</td>
+            </tr>
+            <tr>
+              <td>.NET</td>
+              <td>1 Year</td>
+              <td>$9.00 USD</td>
+              <td>Transfer Price No</td>
+            </tr>
+          </table>
+        </div>
       </div>
 
-      <div class="packages row-flex container">
-        <div class="img"></div>
-        <div class="basic col-flex">
+      <div class="container row-flex packages">
+        <div class="packages-background"></div>
+        <div class="col-flex basic-package">
           <span></span>
           <i class="fas fa-anchor"></i>
           <h4>BASIC PACKAGE</h4>
@@ -119,18 +104,18 @@
             </tr>
             <tr>
               <td>Control Panel & FTP</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
             <tr>
               <td>Free Support</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
           </table>
           <div class="price">15</div>
           <button>SELECT PLAN</button>
         </div>
 
-        <div class="normal col-flex">
+        <div class="col-flex normal-package">
           <span></span>
           <i class="far fa-star"></i>
           <h4>NORMAL PACKAGE</h4>
@@ -157,20 +142,20 @@
             </tr>
             <tr>
               <td>Control Panel & FTP</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
             <tr>
               <td>Free Support</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
           </table>
           <div class="price">30</div>
           <button>SELECT PLAN</button>
         </div>
 
-        <div class="big col-flex">
-        <span></span>
-        <i class="fas fa-star"></i>
+        <div class="col-flex big-package">
+          <span></span>
+          <i class="fas fa-star"></i>
           <h4>BIG PACKAGE</h4>
           <table>
             <tr>
@@ -195,20 +180,20 @@
             </tr>
             <tr>
               <td>Control Panel & FTP</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
             <tr>
               <td>Free Support</td>
-              <td></td>
+              <td class="numbers"></td>
             </tr>
           </table>
           <div class="price">40</div>
           <button>SELECT PLAN</button>
         </div>
 
-        <div class="biggest col-flex">
-        <span></span>
-        <i class="far fa-gem"></i>
+        <div class="col-flex biggest-package">
+          <span></span>
+          <i class="far fa-gem"></i>
           <h4>BIGGEST PACKAGE</h4>
           <table>
             <tr>
@@ -233,17 +218,16 @@
             </tr>
             <tr>
               <td>Control Panel & FTP</td>
-              <td></td>
+              <td  class="numbers"></td>
             </tr>
             <tr>
               <td>Free Support</td>
-              <td></td>
+              <td  class="numbers"></td>
             </tr>
           </table>
           <div class="price">70</div>
           <button>SELECT PLAN</button>
-        </div>
-
+        </div>        
       </div>
 
       <div class="container row-flex about-us">
@@ -255,9 +239,9 @@
             exercitation ullamco laboris...
           </p>
         </article>
-        <div class="row-flex">
+        <div class="col-flex row-flex">
           <div class="col-flex"> 
-            <img src="images/team1.png" alt="" width="100" height="100">
+            <img src="images/team1.png" alt="First team member" width="90" height="90">
             <h5>Jonny Doe</h5>
             <p>Desiner</p>
             <div class="row-flex social-networks">
@@ -267,7 +251,7 @@
             </div>
           </div>
           <div class="col-flex">
-            <img src="images/team2.png" alt="">
+            <img src="images/team2.png" alt="Second team member" width="90" height="90">
             <h5>John Doe</h5>
             <p>Desiner</p>
             <div class="row-flex social-networks">
@@ -277,7 +261,7 @@
             </div>
           </div>
           <div  class="col-flex">
-            <img src="images/team3.png" alt="">
+            <img src="images/team3.png" alt="Third team member" width="90" height="90">
             <h5>Johnathan Doe</h5>
             <p>Desiner</p>
             <div class="row-flex social-networks">
@@ -288,21 +272,19 @@
           </div>
         </div>
       </div>
-
       
       <div class="container slider">
         <input type="radio" name="point" id="slide1" checked>
         <input type="radio" name="point" id="slide2">
-        <input type="radio" name="point" id="slide3">
-            
+        <input type="radio" name="point" id="slide3">      
         <div class="slides">
           <div class="slide1"></div>
           <div class="slide2"></div>
           <div class="slide3"></div>
         </div>
-
-        <article>
-          <p>"Suspendisse tempor turpis odio, sit amet cursus leo consequat non. 
+        <div class="text-on-slider">
+          <p>
+            "Suspendisse tempor turpis odio, sit amet cursus leo consequat non. 
             Maecenas lacinia faucibus enimqui interdum dolorpulvinar vitae."
           </p>
           <span>John Doe |</span>
@@ -311,7 +293,7 @@
             <label for="slide2"></label>
             <label for="slide3"></label>
           </div>
-        </article>
+        </div>
       </div>
 
       <div class="container row-flex services">
@@ -359,9 +341,7 @@
     </main>
 
     <footer class="container">
-      <div class="logo">
-        <img src="images/logo.png" alt="Logo" width="132" height="30">
-      </div>
+      <img src="images/logo.png" alt="Logo" width="132" height="30">
       <nav>
         <ul class="row-flex">
           <li><a href="#">HOME</a></li>
@@ -378,7 +358,7 @@
             Lorem ipsum dolor sit amet, consecteteeseurı adipiscing elit. 
             Donec mollis commodoeesene que, non commodo risus volutpat vel.
           </p>
-         <p>
+          <p>
             Desined by <span>Mert Can Eyriyer</span>.
           </p>
         </div>
@@ -391,18 +371,17 @@
             <li><a href="">Site Map</a></li>
             <li><a href="">Whois Search</a></li>
             <li><a href="">Web Mail</a></li>
-            <li><a href="">Find Domain</a></li>
+            <li><a href="">Find Domain</a></li>  
           </ul>
         </div>
         <div class="col-flex contact-information">
             <a href="tel:0000-0000-0000"><i class="fas fa-phone"></i> 0000-0000-0000</a> 
             <br>
-            <a href="https://informationteam@ghost.com"><i class="far fa-envelope"></i> informationteam@ghost.com</a> 
+            <a href="mailto:informationteam@ghost.com"><i class="far fa-envelope"></i> informationteam@ghost.com</a> 
             <p>
              Lorem Ipsum Street, Lorem Avenue, Lorem Ipsum
             </p>
         </div>
-
       </div>
     </footer>
   </body>

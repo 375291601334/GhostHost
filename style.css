@@ -8,198 +8,205 @@
   outline: 0;
   padding: 0;
   margin: 0;
-  }
-
-  /*-------------------fonts-----------------------*/
-
-  @font-face {
-    font-family: LatoMedium;
-    src: url(fonts/Lato-Medium.ttf);
-   }
-
-  @font-face {
-    font-family: LatoBold;
-    src: url(fonts/Lato-Bold.ttf);
-   }
-
-   @font-face {
-    font-family: LatoSemibold;
-    src: url(fonts/Lato-Semibold.ttf);
-   }
-
-   @font-face {
-    font-family: LatoHeavy;
-    src: url(fonts/Lato-Heavy.ttf);
-   }
-
-   @font-face {
-    font-family: LatoRegular;
-    src: url(fonts/Lato-Regular.ttf);
-   }
-
-   @font-face {
-    font-family: LatoThin;
-    src: url(fonts/Lato-Thin.ttf);
-   }   
-
-   @font-face {
-    font-family: LatoBlack;
-    src: url(fonts/Lato-Black.ttf);
-   }
-   @font-face {
-    font-family: LatoLight;
-    src: url(fonts/Lato-Light.ttf);
-   }   
-
-   @font-face {
-    font-family: "Montserrat Ultra Light";
-    src: url(fonts/Montserrat-UltraLight.otf);
-   }
-
-  @font-face {
-    font-family: MyriadPro;
-    src: url(fonts/MyriadPro-Bold.otf);
-   }
-
-/*------------------------------------------------------------------*/
-.container {
-    position: relative;
-    width: 1600px;
-    padding: 0 200px;
-    box-sizing: border-box;
-  }
-  
-  /* flex-контейнер */
-  .row-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-  }
-  /* CSS настройки flex-элементов */
-  .col-flex {
-    position: relative;
-  }
-
-  .main{
-    position: relative;
-    z-index: 0;
-  }
-
-/*---------------------header--------------------------------*/
-  header {
-    position: absolute;
-    left:0;
-    top:0;
-    z-index: 1;
-    width: 1600px;
-    padding: 38px 210px;
-    box-sizing: border-box;
-    user-select: none;
-  }
-
-  h1 {
-    display: none;
-  }
-
-  header>* {
-    display: inline-block;
-  }
-
-  nav {
-    float: right;
-  }
-
-  nav ul {
-    list-style-type: none; 
-  }
-
-  nav li {
-    padding-left: 68px;
-  }
-
-  nav a {
-    font-family: LatoMedium, Georgia, serif;
-    font-size: 1em;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-  }
-
-  nav a:hover {
-    padding-bottom: 29px;
-    border-bottom: 1px solid rgb(255, 255, 255);
-  }
-
-  hr{
-    height: 1px;
-    width: 1200px;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-
-/*---------------------introduction-----------------------------*/
-.introduction{
-  min-height: 950px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("images/header.png"); 
-  background-size: cover;
-  text-align: center;
-  color: rgb(255, 255, 255);
 }
 
-.introduction>* {
+/*-------------------fonts-----------------------*/
+@font-face {
+  font-family: LatoBlack;
+  src: url(fonts/Lato-Black.ttf);
+}
+
+@font-face {
+  font-family: LatoBold;
+  src: url(fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: LatoHeavy;
+  src: url(fonts/Lato-Heavy.ttf);
+}
+
+@font-face {
+  font-family: LatoLight;
+  src: url(fonts/Lato-Light.ttf);
+}  
+
+@font-face {
+  font-family: LatoMedium;
+  src: url(fonts/Lato-Medium.ttf);
+}
+
+@font-face {
+  font-family: LatoRegular;
+  src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+  font-family: LatoSemibold;
+  src: url(fonts/Lato-Semibold.ttf);
+}
+
+@font-face {
+  font-family: LatoThin;
+  src: url(fonts/Lato-Thin.ttf);
+}    
+
+@font-face {
+  font-family: "Montserrat Ultra Light";
+  src: url(fonts/Montserrat-UltraLight.otf);
+}
+
+@font-face {
+  font-family: MyriadPro;
+  src: url(fonts/MyriadPro-Bold.otf);
+}
+
+/*--------------------general-selectors-------------------------*/
+.container {
+  position: relative;
+  box-sizing: border-box;
+  width: 1600px;
+  padding: 0 200px;
+}
+  
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-flex {
+  position: relative;
+}
+
+.main {
+  position: relative;
+  z-index: 0;
+}
+
+/*---------------------header--------------------------------*/
+header {
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 1600px;
+  padding: 38px 210px;
+  user-select: none;
+}
+
+header > * {
+  display: inline-block;
+}
+
+h1 {
+  display: none;
+}
+
+nav {
+  float: right;
+}
+
+nav ul.row-flex {
+  flex-wrap: nowrap;
+  list-style-type: none; 
+}
+
+nav li {
+  padding-left: 68px;
+}
+
+nav a {
+  font-size: 1em;
+  font-family: "LatoMedium", "Georgia", serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+nav a:hover {
+  padding-bottom: 29px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*---------------------introduction-----------------------------*/
+.introduction {
+  display: flex;
+  flex-direction: column;
+  min-height: 950px;
+  max-height: 1500px;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-image: url(images/header.png); 
+  background-size: cover;
+  overflow: hidden;
+}
+
+.introduction > * {
   display: inline-block;
 }
 
 h2 {
   margin-top: 90px;
-  font-family: MyriadPro;
   font-size: 4.6em;
+  font-family: "MyriadPro", "Times New Roman", serif;
 }
 
 .introduction p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: italic;
-  font-size: 2em; 
-  line-height: 1.6em;
+  font-size: 2em;
+  line-height: 1.6em; 
+  font-family: "Georgia", "Times New Roman", serif;
 }
 
 /*---------------------etry-of-client-----------------------------*/
 .etry-of-client{
   position: relative;
-  min-height: 125px;
+  height: 125px;
 }
 
-.etry-of-client div:first-child,
-.etry-of-client div:last-child {
-  display: flex;
-  justify-content: center;
+.etry-of-client div.col-flex {
   z-index: 0;
+  display: flex;
   flex: auto;
+  justify-content: center;
 }
 
 .etry-of-client button{
   width: 100%;
-  font-family: LatoBold, Georgia, serif;
   font-size: 1.4em;
+  font-family: "LatoBold", "Georgia", serif;
   color: rgb(255, 255, 255);
   background-color: inherit;
 }
 
 .etry-of-client div:first-child {
-  background-color: rgb(33, 66, 74);
-  padding-left: 225px;
   margin-left: -200px;
+  padding-left: 225px;
+  background-color: rgb(33, 66, 74);
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 50.35%;
+  z-index: 1;
+	width: 0;
+  height: 0;
+	border-top: 125px solid rgb(33, 66, 74); 
+	border-right: 30px solid transparent;			
 }
 
 .etry-of-client div:last-child {
-  background-color: rgb(47, 172, 108);
-  padding-right: 180px;
   margin-right: -200px;
+  padding-right: 180px;
+  background-color: rgb(47, 172, 108);
 }
 
 .etry-of-client button:hover {
@@ -208,33 +215,24 @@ h2 {
   cursor: pointer;
 }
 
-.triangle {
-  position: absolute;
-  top: 0;
-  left: 50.35%;
-	width: 0;
-  height: 0;
-  z-index: 1;
-	border-top: 125px solid rgb(33, 66, 74); 
-	border-right: 30px solid transparent;			
-}
-
 /*---------------------domain---------------------------------*/
 .domain {
-  height: 580px;
+  min-height: 580px;
+  max-height: 1500px;
   text-align: center;
+  overflow: hidden;
 }
 
 .domain h3 {
   padding-top: 80px;
-  font-family: LatoHeavy, Georgia, serif;
   font-size: 1.5em;
+  font-family: "LatoHeavy", "Georgia", serif;
 }
 
 .domain p {
-  font-family: "Montserrat Ultra Light", Georgia, serif;
   font-size: 1em;
   line-height: 4.5em;
+  font-family: "Montserrat Ultra Light", "Georgia", serif;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -245,27 +243,38 @@ h2 {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.domain form>* {
+.domain form > * {
   margin: 6px auto;
   padding: 3px 10px;
-  font-family: LatoRegular, Georgia, serif;
+  font-family: "LatoRegular", "Georgia", serif;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .domain input {
   width: 80%;
-  font-family: LatoSemibold, Georgia, serif;
+  font-family: "LatoSemibold", "Georgia", serif;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.domain table {
+.domain input:focus {
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
+}
+
+.domain-table {
   width: 900px;
+  max-height: 900px;
   margin: 10px auto;
-  table-layout: fixed;
-  font-family: LatoRegular, Georgia, serif;
-  font-size: 0.9em;
   border: 1px solid rgb(210, 210, 210);
+  overflow: auto;
+}
+
+.domain table {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 0.9em;
+  font-family: "LatoRegular", "Georgia", serif;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -276,86 +285,87 @@ h2 {
 
 .domain td::after {
   content:"";
-  display: inline-block;
   position: absolute;
   top: 10px;
-  left: -2px;
+  left: -3px;
+  display: inline-block;
   height: 80%;
   border-right: 1px solid rgb(210, 210, 210);
 }
 
 .domain td::before {
   content:"";
-  display: inline-block;
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: 10px;
+  display: inline-block;
   width: 90%;
   border-top: 1px solid rgb(210, 210, 210);
 }
 
 /*---------------------packages-------------------------------*/
 .packages {
-  height: 760px;
+  min-height: 760px;
+  max-height: 2500px;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
-.packages .img {
+.packages-background {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
-  padding-left: -200px;
-  padding-right: -200px;
-  height: 380px;
   width: 100%;
+  height: 50%;
   background-image: url(images/package.png);
   background-size: cover;
 }
 
-.basic {
+.basic-package {
   border-top: 3px solid;
   border-color: rgb(249, 212, 35);
 }
 
-.normal {
+.normal-package {
   border-top: 3px solid;
   border-color: rgb(127, 140, 141);
 }
 
-.big {
+.big-package {
   border-top: 3px solid;
   border-color: rgb(249, 95, 64);
 }
 
-.biggest {
+.biggest-package {
   border-top: 3px solid;
   border-color: rgb(26, 188, 156);
 }
 
-.basic, .normal, .big, .biggest {
-  height: 560px;
-  width: 250px;
+.packages div.col-flex {
   z-index: 1;
-  background: rgb(255, 255, 255);
+  min-height: 560px;
+  max-height: 800px;
+  min-width: 250px;
+  max-width: 500px;
+  margin: 70px 0;
   text-align: center;
+  background: rgb(255, 255, 255);
   box-shadow: 3px 5px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
 }
 
-.basic:hover,
-.normal:hover,
-.big:hover,
-.biggest:hover {
-  transform: scale(1.2);
+.packages div.col-flex:hover {
   box-shadow: 10px 5px 20px 10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
   transition: all 0.6s;
 }
 
 .packages h4 {
-  font-family: LatoBold, Georgia, serif;
   font-size: 0.9em;
   line-height: 3em;
+  font-family: "LatoBold", "Georgia", serif;
 }
 
 .packages span {
@@ -364,23 +374,22 @@ h2 {
   width: 43px;
   margin: 30px auto 5px;
   border: 6px solid;
-  border-radius: 50%;
   border-color: inherit;
+  border-radius: 50%;
 }
 
-.big span {
+.big-package span {
   border-left-color: transparent;
   transform: rotate(45deg);
 }
 
-.normal span {
+.normal-package span {
   border-top-color: transparent;
   border-left-color: transparent;
   transform: rotate(-45deg);
-  color: rgb(0, 0, 0);
 }
 
-.basic span {
+.basic-package span {
   border-top-color: transparent;
   border-left-color: transparent;
   border-bottom-color: transparent;
@@ -388,45 +397,46 @@ h2 {
 }
 
 .packages i {
-  display: block;
   position: absolute;
   top: 45px;
   left: 46%;
+  display: block;
   font-size: 1.2em;
 }
 
 .packages table {
   width: 80%;
+  max-height: 600px;
   margin: 0 auto 30px;
-  font-family: LatoLight, Georgia, serif;
-  color: rgba(0, 0, 0, 0.5);
+  font-family: "LatoLight", "Georgia", serif;
   text-align: left;
+  color: rgba(0, 0, 0, 0.5);
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .packages table .numbers {
-  font-family: LatoBold, Georgia, serif;
+  font-family: "LatoBold", "Georgia", serif;
   text-align: right;
 }
 
-.basic table .numbers,
-.basic i {
+.basic-package table .numbers,
+.basic-package i {
   color: rgb(249, 212, 35);
 }
 
-.normal table .numbers,
-.normal i {
+.normal-package table .numbers,
+.normal-package i {
   color: rgb(127, 140, 141);
 }
 
-.big table .numbers,
-.big i {
+.big-package table .numbers,
+.big-package i {
   color: rgb(249, 95, 64);
 }
 
-.biggest table .numbers,
-.biggest i {
+.biggest-package table .numbers,
+.biggest-package i {
   color: rgb(26, 188, 156);
 }
 
@@ -437,31 +447,32 @@ h2 {
 .packages .price {
   width: 40%;
   margin: 10px auto;
+  font-size: 1.8em;
+  font-family: "LatoHeavy", "Georgia", serif;
   border-bottom: 2px solid;
   border-color: inherit;
-  font-family: LatoHeavy, Georgia, serif;
-  font-size: 1.8em;
 }
 
 .packages .price::before {
   content: "$";
-  font-family: LatoBold, Georgia, serif;
   font-size: 0.7em;
   vertical-align: text-top;
+  font-family: "LatoBold", "Georgia", serif;
 }
 
 .packages .price::after {
   content: "/Mo";
-  font-family: LatoRegular, Georgia, serif;
   font-size: 0.5em;
+  font-family: "LatoRegular", "Georgia", serif;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .packages button {
   padding: 10px;
-  background: inherit;
-  font-family: LatoBold, Georgia, serif;
+  margin-bottom: 20px;
   font-size: 1em;
+  font-family: "LatoBold", "Georgia", serif;
+  background-color: inherit;
 }
 
 .packages button:hover {
@@ -473,72 +484,81 @@ h2 {
 /*---------------------about-us-------------------------------*/
 .about-us {
   min-height: 400px;
+  max-height: 1000px;
+  overflow: hidden;
 }
 
 .about-us article {
-  width: 415px;
+  width: 425px;
+  max-height: 700px;
+  margin-bottom: 100px;
   padding: 100px 100px 0 0;
-  border-top: 3px dotted rgba(0, 0, 0, 0.2);
-  font-family: LatoThin, Georgia, serif;
   font-size: 1.2em;
   line-height: 1.5em;
+  font-family: "LatoThin", "Georgia", serif;
   text-align: justify;
+  border-top: 3px dotted rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .about-us article::after {
   content:"";
-  display: inline-block;
   position: absolute;
   top: 110px;
   left: 520px;
-  height: 45%;
+  display: inline-block;
+  height: 100%;
+  margin-bottom: 110px;
   border-left: 3px dotted rgba(0, 0, 0, 0.2);
 }
 
-.about-us h3{
-  font-family: LatoSemibold;
-  font-size: 1.8em;
+.about-us h3 {
   padding-bottom: 20px;
+  font-size: 1.8em;
+  font-family: "LatoSemibold", "Times New Roman", serif;
 }
 
-.about-us h3 span{
-  font-family: LatoBlack;
+.about-us h3 span {
+  font-family: "LatoBlack", "Georgia", serif;
 }
 
-.about-us>div {
-  width: 550px;
-  padding: 110px 0 100px 120px;
-  justify-content: space-between;
+.about-us > div {
+  width: 670px;
+  padding: 90px 0;
+  justify-content: space-around;
+  align-content: flex-start;
   text-align: center;
   border-top: 3px dotted rgba(0, 0, 0, 0.2);
 }
 
-.about-us>div .col-flex:hover {
+.about-us > div > div.col-flex {
+  margin: 20px 0 10px 100px;
+}
+
+.about-us > div .col-flex:hover {
   transform: scale(1.2);
   transition: all 0.6s;
 }
 
 .about-us img {
-  width: 90px;
-  height: 90px;
   border: 3px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   user-select: none;
 }
 
 .about-us h5 {
-  font-family: LatoSemibold, Georgia, serif;
   font-size: 1.1em;
   line-height: 1.6em;
+  font-family: "LatoSemibold", "Georgia", serif;
 }
 
 .about-us p {
-  font-family: LatoRegular, Georgia, serif;
   font-size: 1em;
+  font-family: "LatoRegular", "Georgia", serif;
   color: rgba(0, 0, 0, 0.4);
 }
 
-.social-networks{
+.social-networks {
   width: 100px;
   margin: 10px 0;
   justify-content: space-around;
@@ -559,27 +579,27 @@ h2 {
 /*---------------------slider---------------------------------*/
 .slider {
   position: relative;
-  height: 200px;
   left: -200px;
+  height: 200px;
 }
 
-.slides>* {
+.slides > * {
   position: absolute;
+  z-index: 0;
+  width: 100%;
   height: 200px;
-	width: 100%;
-	z-index: 0;
 }
 
 .slide1 {
-  background-image: url(images/comment.png);
+  background-image: url(images/slide1.png);
 }
 
 .slide2 {
-  background-image: url(images/package.png);
+  background-image: url(images/slide2.png);
 }
 
 .slide3 {
-  background-image: url(images/header.png);
+  background-image: url(images/slide3.png);
 }
 
 #slide1:checked ~ .slides > .slide1,
@@ -592,56 +612,60 @@ h2 {
 	display: none;
 }
 
-.slider article {
+.text-on-slider {
   position: relative;
   left: 30%;
   top: 25%;
-  width: 75%;
   z-index: 2;
-  font-family: LatoLight, Georgia, serif;
-  color: rgb(210, 210, 210);
+  width: 75%;
   font-size: 1.2em;
+  font-family: "LatoLight", "Georgia", serif;
   text-align: center;
+  color: rgb(210, 210, 210);
+  overflow: hidden;
 }
 
-.slider article>span {
+.text-on-slider > span {
   line-height: 3em;
-  font-family: LatoSemibold, Georgia, serif;
+  font-family: "LatoSemibold", "Georgia", serif;
   color: rgb(255, 255, 255);
 }
 
-.controls{ 
+.controls { 
   display: inline-block;
 }
 
-.controls label{
+.controls label {
   position: relative;
 	display: inline-block;
   width: 5px;
   height: 5px;
   margin: auto 5px;
-  border-radius: 50%;
   border: 1px solid rgb(255, 255, 255);
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.controls>label:hover,
-#slide1:checked ~ article>div.controls label:nth-of-type(1),
-#slide2:checked ~ article>div.controls label:nth-of-type(2),
-#slide3:checked ~ article>div.controls label:nth-of-type(3) {
+.controls > label:hover,
+#slide1:checked ~ .text-on-slider > div.controls label:nth-of-type(1),
+#slide2:checked ~ .text-on-slider > div.controls label:nth-of-type(2),
+#slide3:checked ~ .text-on-slider > div.controls label:nth-of-type(3) {
   background: rgb(255, 255, 255);
 }
 
 /*---------------------services-------------------------------*/
 .services {
   min-height: 340px;
-  justify-content: space-between;
+  max-height: 800px;
+  justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 
 .services .col-flex{
   height: 140px;
   width: 220px;
+  margin: 80px 30px;
   text-align: center;
 }
 
@@ -658,9 +682,9 @@ h2 {
   display: inline-block;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   font-size: 1.5em;
   color: rgb(255, 255, 255);
+  border-radius: 50%;
 }
 
 .services span i {
@@ -685,46 +709,48 @@ h2 {
 
 .services h4 {
   padding: 10px;
-  font-family: LatoHeavy, Georgia, serif;
+  font-family: "LatoHeavy", "Georgia", serif;
   color: rgb(0, 0, 0);
 }
 
 .services p {
-  font-family: LatoLight, Georgia, serif;
+  font-family: "LatoLight", "Georgia", serif;
   color: rgba(0, 0, 0, 0.6);
 }
 
-/*---------------------fotter-------------------------------*/
+/*---------------------footer-------------------------------*/
 footer {
-  height: 300px;
-  background-color: rgb(42, 42, 42);
+  min-height: 300px;
+  max-height: 500px;
   font-size: 0.8em;
+  background-color: rgb(42, 42, 42);
+  overflow: hidden;
 }
 
-footer div.row-flex{
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-footer>* {
+footer > * {
   display: inline-block;
   color: rgba(0, 0, 0, 0.3);
 }
 
 footer nav li {
-  padding: 20px 0 20px 45px;
+  padding: 20px 0 19px 45px;
 }
 
-footer .logo {
+footer img[alt="Logo"] {
   padding: 10px 0;
   user-select: none;
 }
 
+footer div.row-flex {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
 footer .col-flex {
   margin: 50px 0;
-  font-family: LatoLight, Georgia, serif;
   font-size: 1.2em;
   line-height: 1.8em;
+  font-family: "LatoLight", "Georgia", serif;
   color: rgb(148, 148, 148 );
 }
 
@@ -743,12 +769,12 @@ footer .col-flex {
 }
 
 footer .col-flex span{
-  font-family: LatoSemibold, Georgia, serif;
+  font-family: "LatoSemibold", "Georgia", serif;
 }
 
 footer .col-flex a {
-  text-decoration: none;
   color: rgb(148, 148, 148 );
+  text-decoration: none;
 }
 
 footer .col-flex a:hover {
@@ -762,5 +788,5 @@ footer .col-flex ul {
 }
 
 footer .col-flex ul li::before {
-  content: ">  ";
+  content: ">";
 }
