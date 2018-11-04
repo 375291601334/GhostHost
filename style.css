@@ -323,6 +323,18 @@ h2 {
   background-size: cover;
 }
 
+.pattern{ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0) 60%), linear-gradient(-45deg, rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 10%);
+  background-size: 9.9px 9.9px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .basic-package {
   border-top: 3px solid;
   border-color: rgb(249, 212, 35);
@@ -536,6 +548,7 @@ h2 {
 }
 
 .about-us > div .col-flex:hover {
+  text-decoration: underline;
   transform: scale(1.2);
   transition: all 0.6s;
 }
@@ -544,6 +557,12 @@ h2 {
   border: 3px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   user-select: none;
+}
+
+.about-us .col-flex > a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-decoration-color: rgb(0, 0, 0);
 }
 
 .about-us h5 {
@@ -591,15 +610,18 @@ h2 {
 }
 
 .slide1 {
-  background-image: url(images/slide1.png);
+  background-image: url(images/slider.png);
+  background-position: 0 400px;
 }
 
 .slide2 {
-  background-image: url(images/slide2.png);
+  background-image: url(images/slider.png);
+  background-position: 0 300px;
 }
 
 .slide3 {
-  background-image: url(images/slide3.png);
+  background-image: url(images/slider.png);
+  background-position: 0 200px;
 }
 
 #slide1:checked ~ .slides > .slide1,
@@ -613,11 +635,13 @@ h2 {
 }
 
 .text-on-slider {
-  position: relative;
-  left: 30%;
-  top: 25%;
+  position: absolute;
+  left: 200px;
+  top: 0;
   z-index: 2;
-  width: 75%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3% 22%;
   font-size: 1.2em;
   font-family: "LatoLight", "Georgia", serif;
   text-align: center;
@@ -670,12 +694,14 @@ h2 {
 }
 
 .services .col-flex:hover {
+  text-decoration: underline;
   transform: scale(1.2);
   transition: all 0.6s;
 }
 
 .services a {
   text-decoration: none;
+  text-decoration-color: rgb(0, 0, 0);
 }
 
 .services span {
